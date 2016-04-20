@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ailk.dubbo.mapper.NewPollingMapper" >
+  <resultMap id="BaseResultMap" type="com.ailk.dubbo.model.polling.Polling" >
+    <result column="S_ID" property="sId" jdbcType="VARCHAR" />
+    <result column="S_NAME" property="sName" jdbcType="VARCHAR" />
+    <result column="S_CODE" property="sCode" jdbcType="VARCHAR" />
+    <result column="S_TITLE" property="sTitle" jdbcType="VARCHAR" />
+    <result column="S_SCOPE" property="sScope" jdbcType="CHAR" />
+    <result column="S_FLAG" property="sFlag" jdbcType="CHAR" />
+    <result column="S_SORT" property="sSort" jdbcType="INTEGER" />
+    <result column="S_STYLE" property="sStyle" jdbcType="VARCHAR" />
+    <result column="INDB_TIME" property="indbTime" jdbcType="TIMESTAMP" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap type="com.ailk.dubbo.model.polling.Pollings" id="resultStratgy" >  
+       <result column="STRATEGY_ID" property="sId"/>  
+       <result column="STRATEGY_TITLE" property="sTitle"/>  
+       <result column="STRATEGY_SORT" property="sSort"/>  
+       <result column="REMARK" property="remark"/> 
+       <collection property="pollingBlockList" ofType="com.ailk.dubbo.model.polling.PollingBlocks" column="BLOCK_ID">
+       		<id column="BLOCK_ID" property="blockId"/>
+       		<result column="BLOCK_STYLE" property="blockStyle"/>
+       		<result column="STRATEGY_ID" property="strategyId"/>
+	        <collection property="pollingElementList" ofType="com.ailk.dubbo.model.polling.PollingElements" column="ELEMENT_ID"> 
+	       	   <id column="ELEMENT_ID" property="srId"/>
+	       	   <result column="ELEMENT_SORT" property="srSort"/>
+	           <result column="ELEMENT_IMG" property="scImg"/>   
+	           <association property="pollingContents" javaType="com.ailk.dubbo.model.polling.PollingContents" column="CONTENT_ID">  
+	           		<id column="CONTENT_ID" property="scId"/>
+	           		<result column="CONTENT_NAME" property="scName"/> 
+	           		<result column="CONTENT_TYPE" property="scType"/> 
+	           		<collection property="pollingParamList" ofType="com.ailk.dubbo.model.polling.PollingParams" column="PARAM_ID">
+	           			<result column="PARAM_ID" property="paramId"/> 
+	           			<result column="PARAM_CODE" property="paramCode"/> 
+	           			<result column="PARAM_VALUE" property="paramValue"/> 
+	           			<result column="PARAM_NAME" property="paramName"/> 
+	           		</collection> 
+	           </association> 
+	        </collection>  
+        </collection>  
+    </resultMap> 
+    
+  <select id="obtainPollingUrl" resultType="java.lang.String">
+	  SELECT
+		PARAM2
+	FROM
+		PM_SVC_PARAM_COMMON
+	WHERE
+		PARAM_CODE = 'PIC_SERVICE_CONF'
+	AND PARAM1 = '1'
+  </select>  
+ <select id="obtainSuperMarketUrl" resultType="java.lang.String">
+		  SELECT
+			PARAM2
+		FROM
+			PM_SVC_PARAM_COMMON
+		WHERE
+			PARAM_CODE = 'PIC_SERVICE_CONFURL'
+		AND PARAM1 = '6'
+  </select>     
+    
+    
+  <select id="obtainPollingCell" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.polling.PollingParam">
+   SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,A.REMARK,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,PM_SVC_STRATEGY_BLOCK E,
+		PM_SVC_STRATEGY_ELEMENT B LEFT JOIN 
+		PM_SVC_STRATEGY_CONTENT C  ON B.CONTENT_ID = C.CONTENT_ID LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID 
+		
+	WHERE (find_in_set(#{cellId,jdbcType=VARCHAR},A.STRATEGY_CODE )
+	      AND A.STRATEGY_SCOPE ='2')
+	      AND A.STRATEGY_ID = E.STRATEGY_ID
+		  AND E.BLOCK_ID = B.BLOCK_ID
+		  AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '0'
+	      <![CDATA[
+	      AND (B.START_TIME < NOW() AND B.END_TIME > NOW())
+	      ]]>
+		ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT, A.STRATEGY_SCOPE DESC
+  </select>
+  
+   <select id="obtainPollingCity" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.polling.PollingParam">
+  SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,A.REMARK,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,PM_SVC_STRATEGY_BLOCK E,
+		PM_SVC_STRATEGY_ELEMENT B LEFT JOIN 
+		PM_SVC_STRATEGY_CONTENT C  ON B.CONTENT_ID = C.CONTENT_ID LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID 
+		
+	WHERE A.STRATEGY_ID = E.STRATEGY_ID
+		  AND E.BLOCK_ID = B.BLOCK_ID
+	      AND  (find_in_set(#{city,jdbcType=VARCHAR},A.STRATEGY_CODE ) 
+	           AND A.STRATEGY_SCOPE ='1')
+	      AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '0'
+	     <![CDATA[
+	      AND (B.START_TIME < NOW() AND B.END_TIME > NOW())
+	      ]]>
+		ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT, A.STRATEGY_SCOPE DESC
+   </select>
+   
+   <select id="obtainPollingCountry" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.polling.PollingParam">
+  SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,A.REMARK,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,PM_SVC_STRATEGY_BLOCK E,
+		PM_SVC_STRATEGY_ELEMENT B LEFT JOIN 
+		PM_SVC_STRATEGY_CONTENT C  ON B.CONTENT_ID = C.CONTENT_ID LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID 
+	WHERE A.STRATEGY_CODE='-1'
+	      AND A.STRATEGY_ID = E.STRATEGY_ID
+		  AND E.BLOCK_ID = B.BLOCK_ID
+	      AND A.STRATEGY_SCOPE ='0'
+	      AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '0'
+	     <![CDATA[
+	      AND (B.START_TIME < NOW() AND B.END_TIME > NOW())
+	      ]]>
+		ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT, A.STRATEGY_SCOPE DESC
+   </select>
+   
+   <select id="obtainPollingsDefault" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.polling.PollingParam">
+   SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,A.REMARK,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,PM_SVC_STRATEGY_BLOCK E,
+		PM_SVC_STRATEGY_ELEMENT B LEFT JOIN 
+		PM_SVC_STRATEGY_CONTENT C  ON B.CONTENT_ID = C.CONTENT_ID LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID 
+		
+	WHERE A.STRATEGY_CODE = '01'
+	      AND A.STRATEGY_ID =E.STRATEGY_ID 
+		  AND E.BLOCK_ID = B.BLOCK_ID
+	      AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '0'
+	      <![CDATA[
+	      AND (B.START_TIME < NOW() AND B.END_TIME > NOW())
+	      ]]>
+		  ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT, A.STRATEGY_SCOPE DESC
+   </select>
+   
+   
+   
+   
+   <select id="obtainSuperMarket" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.polling.PollingParam">
+  SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,A.REMARK,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,PM_SVC_STRATEGY_BLOCK E,
+		PM_SVC_STRATEGY_ELEMENT B LEFT JOIN 
+		PM_SVC_STRATEGY_CONTENT C  ON B.CONTENT_ID = C.CONTENT_ID LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID 
+		
+	WHERE A.STRATEGY_ID = E.STRATEGY_ID
+		  AND E.BLOCK_ID = B.BLOCK_ID
+	      AND  A.STRATEGY_CODE =#{city,jdbcType=VARCHAR} 
+	           AND A.STRATEGY_SCOPE ='1'
+	      AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '2'
+		ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT, A.STRATEGY_SCOPE DESC
+   </select>
+   
+   <select id="selectUserCountByCellId" resultType="java.lang.Integer" parameterType="java.lang.String" >    
+        SELECT count(1) as count from PM_R_VISITOR where CELL_ID=#{cellid,jdbcType=VARCHAR}
+  </select>
+  
+   <select id="obtainlongitude" parameterType="java.lang.String" resultType="java.util.HashMap">
+  select LONGITUDE,LATITUDE from PM_TD_CELL where CELL_ID =#{cellId,jdbcType=VARCHAR}
+  </select>
+  
+  
+  <!-- 查询是否绑定物业 -->
+  <select id="selectBoundWuYe" parameterType="java.lang.String" resultType="java.util.HashMap">   
+   SELECT
+	CELL_RELATION,COMPANY_CODE
+FROM
+	PM_TD_CELL
+WHERE
+	CELL_ID = #{cellId,jdbcType=DECIMAL}
+   </select>
+   
+</mapper>

@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+   
+    <!-- 应用名 -->
+    <!-- 需要用到多个注册中心，因此在 dubbo.properties 中声明 -->
+    <dubbo:application name="superdemo_provider"/>
+    
+     <dubbo:annotation  package="com.ailk.dubbo.service" />
+    <!-- 连接到哪个本地注册中心 -->
+    <dubbo:registry id="superdemo_zk" address="zookeeper://localhost:2181"/>
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="28080"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <!-- <dubbo:service registry="superdemo_zk"  timeout="3000"  interface="com.ailk.dubbo.service.IUserService"  ref="userService"/> -->
+    <!--  <dubbo:service registry="superdemo_zk"  timeout="3000"  interface="com.ailk.dubbo.service.IStrategySvc"  ref="iStrategySvc"/> -->
+    <!--  <dubbo:service registry="superdemo_zk"  timeout="3000"  interface="com.ailk.dubbo.service.INewPollingSvc"  ref="iNewPollingSvc"/>-->       
+
+
+</beans>

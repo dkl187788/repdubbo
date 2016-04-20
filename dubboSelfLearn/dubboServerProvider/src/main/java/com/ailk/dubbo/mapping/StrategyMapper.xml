@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ailk.dubbo.mapper.StrategyMapper" >
+
+  <resultMap type="com.ailk.dubbo.model.strategy.Strategys" id="resultStratgy" >  
+       <result column="STRATEGY_ID" property="sId"/>  
+       <result column="STRATEGY_TITLE" property="sTitle"/>  
+       <result column="STRATEGY_SORT" property="sSort"/>  
+       <collection property="strategyBlockList" ofType="com.ailk.dubbo.model.strategy.StrategyBlocks" column="BLOCK_ID">
+       		<id column="BLOCK_ID" property="blockId"/>
+       		<result column="BLOCK_STYLE" property="blockStyle"/>
+       		<result column="STRATEGY_ID" property="strategyId"/>
+	       <collection property="strategyElementList" ofType="com.ailk.dubbo.model.strategy.StrategyElements" column="ELEMENT_ID"> 
+	       	   <id column="ELEMENT_ID" property="srId"/>
+	       	   <result column="ELEMENT_SORT" property="srSort"/>
+	           <result column="ELEMENT_IMG" property="scImg"/>   
+	           <association property="strategyContents" javaType="com.ailk.dubbo.model.strategy.StrategyContents" column="CONTENT_ID">  
+	           		<id column="CONTENT_ID" property="scId"/>
+	           		<result column="CONTENT_NAME" property="scName"/> 
+	           		<result column="CONTENT_TYPE" property="scType"/> 
+	           		<collection property="StrategyParamList" ofType="com.ailk.dubbo.model.strategy.StrategyParams" column="PARAM_ID">
+	           			<result column="PARAM_ID" property="paramId"/> 
+	           			<result column="PARAM_CODE" property="paramCode"/> 
+	           			<result column="PARAM_VALUE" property="paramValue"/> 
+	           			<result column="PARAM_NAME" property="paramName"/> 
+	           		</collection> 
+	           </association> 
+	        </collection>  
+        </collection>  
+    </resultMap> 
+  <!-- PM_SVC_STRATEGY_PARAM ,   这个sql 需要优化 -->
+  <!-- 邻乐汇首页获取频道信息 包含全国 城市 小区 范围 -->
+  <select id="obtainStrategys" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.strategy.StrategyParam">
+    SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,
+		PM_SVC_STRATEGY_ELEMENT B, 
+		PM_SVC_STRATEGY_CONTENT C LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID, 
+		PM_SVC_STRATEGY_BLOCK E
+	WHERE A.STRATEGY_ID = E.STRATEGY_ID
+		  AND E.BLOCK_ID = B.BLOCK_ID
+		  AND B.CONTENT_ID = C.CONTENT_ID 
+	      AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '1'
+	      <![CDATA[
+	      AND (B.START_TIME < NOW() AND B.END_TIME > NOW())
+	      ]]>
+	      AND ( A.STRATEGY_SCOPE = '0' 
+	      		OR  (A.STRATEGY_SCOPE = '1' AND find_in_set(#{city,jdbcType=VARCHAR},A.STRATEGY_CODE ))
+	      		OR  (A.STRATEGY_SCOPE = '2' AND find_in_set(#{cellId,jdbcType=VARCHAR},A.STRATEGY_CODE ))
+	      	   )
+		ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT
+  </select>
+  
+   <!-- 邻乐汇首页获取频道信息 只包含小区 范围 -->
+  <select id="obtainStrategysOnlyCell" resultMap="resultStratgy" parameterType="com.ailk.dubbo.model.strategy.StrategyParam">
+    SELECT 	 A.STRATEGY_ID, A.STRATEGY_TITLE, A.STRATEGY_SORT,
+			 B.ELEMENT_IMG, B.ELEMENT_ID, B.ELEMENT_SORT,
+			 C.CONTENT_NAME ,C.CONTENT_TYPE, C.CONTENT_ID,
+			 D.PARAM_ID,D.PARAM_CODE,D.PARAM_VALUE, D.PARAM_NAME,
+			 E.BLOCK_ID,E.STRATEGY_ID,E.BLOCK_STYLE
+	FROM 
+		PM_SVC_STRATEGY A,
+		PM_SVC_STRATEGY_ELEMENT B, 
+		PM_SVC_STRATEGY_CONTENT C LEFT JOIN PM_SVC_STRATEGY_PARAM D ON C.CONTENT_ID = D.CONTENT_ID, 
+		PM_SVC_STRATEGY_BLOCK E
+	WHERE A.STRATEGY_ID = E.STRATEGY_ID
+		  AND E.BLOCK_ID = B.BLOCK_ID
+		  AND B.CONTENT_ID = C.CONTENT_ID 
+	      AND A.STRATEGY_FLAG = '0'
+	      AND A.STRATEGY_TYPE = '1'
+	      <![CDATA[
+	      AND (B.START_TIME < NOW() AND B.END_TIME > NOW())
+	      ]]>
+	      AND (A.STRATEGY_SCOPE = '2' AND find_in_set(#{cellId,jdbcType=VARCHAR},A.STRATEGY_CODE ))
+	      ORDER BY A.STRATEGY_SORT, A.STRATEGY_ID, B.ELEMENT_SORT
+  </select>
+  
+  <!-- 根据常用配置表确定是否需要查询全国城市 范围数据 -->
+  <select id="obtainStrategyCell"  resultType="java.lang.String"  parameterType="java.lang.String">
+		  SELECT
+			PARAM1
+		FROM
+			PM_SVC_PARAM_COMMON
+		WHERE
+			PARAM_CODE = 'STRATEGY_ONLY_CELL'
+			AND PARAM1 = #{cellId,jdbcType=VARCHAR}
+	    	AND PARAM2 = '1'
+  </select>
+  
+  <!-- 获取频道图片的URl前缀 -->
+  <select id="obtainUrlService" resultType="java.lang.String" parameterType="java.util.HashMap">
+    SELECT 
+    	PARAM2
+    FROM PM_SVC_PARAM_COMMON
+    WHERE PARAM_CODE = 'PIC_SERVICE_CONF'
+    AND PARAM1 = #{param1,jdbcType=VARCHAR}
+  </select>
+  
+</mapper>

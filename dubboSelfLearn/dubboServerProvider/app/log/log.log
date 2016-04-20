@@ -1,0 +1,1291 @@
+ INFO 04-12 16:29:01(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:29:01(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@42704baa: startup date [Tue Apr 12 16:29:01 CST 2016]; root of context hierarchy
+ INFO 04-12 16:29:01(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:29:01(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:29:02(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:29:02(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:29:02(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ERROR 04-12 16:29:02(DruidDataSource.java:614): init datasource error
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'master'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:604)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+ERROR 04-12 16:29:02(DruidDataSource.java:631): dataSource init error
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'master'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:604)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+ INFO 04-12 16:29:02(DruidDataSource.java:640): {dataSource-1} inited
+ WARN 04-12 16:29:02(AbstractApplicationContext.java:487): Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceWrite' defined in class path resource [spring-mybatis.xml]: Invocation of init method failed; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'master'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'master'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1360)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1414)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:604)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 13 more
+ INFO 04-12 16:30:31(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:30:31(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@42704baa: startup date [Tue Apr 12 16:30:31 CST 2016]; root of context hierarchy
+ INFO 04-12 16:30:31(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:30:31(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:30:31(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:30:31(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:30:31(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:30:32(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:30:32(DruidDataSource.java:640): {dataSource-2} inited
+ WARN 04-12 16:30:32(AbstractApplicationContext.java:487): Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ailk.dubbo.service.IUserService': Cannot resolve reference to bean 'userService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 16 more
+ INFO 04-12 16:30:32(DruidDataSource.java:1290): {dataSource-2} closed
+ INFO 04-12 16:30:32(DruidDataSource.java:1290): {dataSource-1} closed
+ INFO 04-12 16:30:32(AbstractConfig.java:450):  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:30:32(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:36:12(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:36:12(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4139eeda: startup date [Tue Apr 12 16:36:12 CST 2016]; root of context hierarchy
+ INFO 04-12 16:36:12(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:36:12(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:36:12(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:36:12(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:36:13(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:36:13(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:36:13(DruidDataSource.java:640): {dataSource-2} inited
+ WARN 04-12 16:36:14(AbstractApplicationContext.java:487): Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ailk.dubbo.service.UserService': Cannot resolve reference to bean 'userService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 16 more
+ INFO 04-12 16:36:14(DruidDataSource.java:1290): {dataSource-2} closed
+ INFO 04-12 16:36:14(DruidDataSource.java:1290): {dataSource-1} closed
+ INFO 04-12 16:36:14(AbstractConfig.java:450):  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:36:14(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:39:56(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:39:56(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4139eeda: startup date [Tue Apr 12 16:39:56 CST 2016]; root of context hierarchy
+ INFO 04-12 16:39:56(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:39:56(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:39:57(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:39:57(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:39:57(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:39:57(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:39:58(DruidDataSource.java:640): {dataSource-2} inited
+ WARN 04-12 16:39:58(AbstractApplicationContext.java:487): Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ailk.dubbo.service.UserService': Cannot resolve reference to bean 'userService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 16 more
+ INFO 04-12 16:39:58(DruidDataSource.java:1290): {dataSource-2} closed
+ INFO 04-12 16:39:58(DruidDataSource.java:1290): {dataSource-1} closed
+ INFO 04-12 16:39:58(AbstractConfig.java:450):  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:39:58(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:40:21(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:40:21(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4cbfea1d: startup date [Tue Apr 12 16:40:21 CST 2016]; root of context hierarchy
+ INFO 04-12 16:40:21(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:40:21(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:40:22(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:40:22(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:40:22(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:40:22(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:40:22(DruidDataSource.java:640): {dataSource-2} inited
+ WARN 04-12 16:40:23(AbstractApplicationContext.java:487): Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ailk.dubbo.service.UserService': Cannot resolve reference to bean 'userService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at BeanFactoryUtil.init(BeanFactoryUtil.java:16)
+	at Launcher.main(Launcher.java:21)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 16 more
+ INFO 04-12 16:40:23(DruidDataSource.java:1290): {dataSource-2} closed
+ INFO 04-12 16:40:23(DruidDataSource.java:1290): {dataSource-1} closed
+ INFO 04-12 16:40:23(AbstractConfig.java:450):  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:40:23(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:41:58(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:41:58(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4139eeda: startup date [Tue Apr 12 16:41:58 CST 2016]; root of context hierarchy
+ INFO 04-12 16:41:58(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:41:58(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:41:58(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:41:58(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:41:59(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:41:59(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:42:00(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 16:42:00(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.UserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:42:00(AbstractConfig.java:450):  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:42:00(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:32(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:43:32(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4139eeda: startup date [Tue Apr 12 16:43:32 CST 2016]; root of context hierarchy
+ INFO 04-12 16:43:33(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:43:33(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:43:33(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:43:33(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:43:33(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:43:34(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:43:34(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 16:43:34(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:35(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:35(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:35(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=13244&registry=zookeeper&timestamp=1460450614960, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:35(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:35(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 16:43:35(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 16:43:35(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@5c0e920f
+ INFO 04-12 16:43:35(ClientCnxn.java:1041): Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181
+ WARN 04-12 16:43:35(ClientCnxn.java:1161): Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Address family not supported by protocol family: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:507)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1050)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1077)
+ INFO 04-12 16:43:36(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 16:43:36(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 16:43:36(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa50000, negotiated timeout = 30000
+ INFO 04-12 16:43:36(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 16:43:36(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:36(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:43:36(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:52(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:47:52(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@65b4fad5: startup date [Tue Apr 12 16:47:52 CST 2016]; root of context hierarchy
+ INFO 04-12 16:47:52(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:47:53(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:47:53(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:47:53(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:47:53(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:47:54(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:47:54(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 16:47:54(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:54(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:54(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:54(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=6796&registry=zookeeper&timestamp=1460450874755, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:55(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:55(AbstractRegistry.java:232):  [DUBBO] Load registry store file C:\Users\adudu\.dubbo\dubbo-registry-localhost.cache, data: {com.ailk.dubbo.service.IUserService=empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=13244&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450614976}, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:55(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 16:47:55(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 16:47:55(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@20ca5bff
+ INFO 04-12 16:47:55(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 16:47:55(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 16:47:55(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa50001, negotiated timeout = 30000
+ INFO 04-12 16:47:55(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 16:47:55(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:55(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:47:55(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:53:02(UserDaoImpl.java:35): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 16:53:02(UserDaoImpl.java:48): getUserListByMapSql 根据动态参数查询用户对象列表
+ERROR 04-12 16:53:02(ExceptionFilter.java:87):  [DUBBO] Got unchecked and undeclared exception which called by 10.1.38.41. service: com.ailk.dubbo.service.IUserService, method: getUserByMapSql, exception: org.apache.ibatis.binding.BindingException: Type interface com.ailk.dubbo.mapper.UserMapper is not known to the MapperRegistry., dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Type interface com.ailk.dubbo.mapper.UserMapper is not known to the MapperRegistry.
+	at org.apache.ibatis.binding.MapperRegistry.getMapper(MapperRegistry.java:36)
+	at org.apache.ibatis.session.Configuration.getMapper(Configuration.java:536)
+	at org.mybatis.spring.SqlSessionTemplate.getMapper(SqlSessionTemplate.java:272)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:49)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:36)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+ INFO 04-12 16:56:07(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:56:07(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@42704baa: startup date [Tue Apr 12 16:56:07 CST 2016]; root of context hierarchy
+ INFO 04-12 16:56:07(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:56:07(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:56:07(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:56:07(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:56:07(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:56:08(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:56:08(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 16:56:09(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:09(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:09(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:09(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=9204&registry=zookeeper&timestamp=1460451369159, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:09(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:09(AbstractRegistry.java:232):  [DUBBO] Load registry store file C:\Users\adudu\.dubbo\dubbo-registry-localhost.cache, data: {com.ailk.dubbo.service.IUserService=dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6796&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460450874773 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=routers&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898}, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:09(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 16:56:09(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 16:56:09(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@2f4c7a98
+ INFO 04-12 16:56:09(ClientCnxn.java:1041): Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181
+ WARN 04-12 16:56:09(ClientCnxn.java:1161): Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Address family not supported by protocol family: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:507)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1050)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1077)
+ INFO 04-12 16:56:09(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 16:56:09(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 16:56:09(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa50003, negotiated timeout = 30000
+ INFO 04-12 16:56:09(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 16:56:09(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:10(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:10(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:56:30(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 16:56:30(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ERROR 04-12 16:56:30(ExceptionFilter.java:87):  [DUBBO] Got unchecked and undeclared exception which called by 10.1.38.41. service: com.ailk.dubbo.service.IUserService, method: getUserByMapSql, exception: org.apache.ibatis.binding.BindingException: Type interface com.ailk.dubbo.mapper.UserMapper is not known to the MapperRegistry., dubbo version: 2.5.3, current host: 127.0.0.1
+org.apache.ibatis.binding.BindingException: Type interface com.ailk.dubbo.mapper.UserMapper is not known to the MapperRegistry.
+	at org.apache.ibatis.binding.MapperRegistry.getMapper(MapperRegistry.java:36)
+	at org.apache.ibatis.session.Configuration.getMapper(Configuration.java:536)
+	at org.mybatis.spring.SqlSessionTemplate.getMapper(SqlSessionTemplate.java:272)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:50)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+ INFO 04-12 16:58:12(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 16:58:12(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4139eeda: startup date [Tue Apr 12 16:58:12 CST 2016]; root of context hierarchy
+ INFO 04-12 16:58:13(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 16:58:13(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 16:58:13(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 16:58:13(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 16:58:13(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 16:58:14(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 16:58:14(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 16:58:14(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=6764&registry=zookeeper&timestamp=1460451494915, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(AbstractRegistry.java:232):  [DUBBO] Load registry store file C:\Users\adudu\.dubbo\dubbo-registry-localhost.cache, data: {com.ailk.dubbo.service.IUserService=dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=9204&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451369185 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=routers&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898}, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 16:58:15(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 16:58:15(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@18287811
+ INFO 04-12 16:58:15(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 16:58:15(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 16:58:15(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa50004, negotiated timeout = 30000
+ INFO 04-12 16:58:15(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 16:58:15(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:15(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 16:58:28(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 16:58:28(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ERROR 04-12 16:58:29(Log4jFilter.java:152): {conn-110010, pstmt-120000} execute error.  select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:583)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1059)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:56)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy10.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy15.getUserListByMapSql(Unknown Source)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:51)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+ INFO 04-12 16:58:29(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+ INFO 04-12 16:58:29(SQLErrorCodesFactory.java:126): SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+ERROR 04-12 16:58:29(ExceptionFilter.java:87):  [DUBBO] Got unchecked and undeclared exception which called by 10.1.38.41. service: com.ailk.dubbo.service.IUserService, method: getUserByMapSql, exception: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+### The error may exist in com/ailk/dubbo/mapper/UserMapper.java (best guess)
+### The error may involve com.ailk.dubbo.mapper.UserMapper.getUserListByMapSql-Inline
+### The error occurred while setting parameters
+### SQL: select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+### The error may exist in com/ailk/dubbo/mapper/UserMapper.java (best guess)
+### The error may involve com.ailk.dubbo.mapper.UserMapper.getUserListByMapSql-Inline
+### The error occurred while setting parameters
+### SQL: select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:71)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:365)
+	at $Proxy10.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy15.getUserListByMapSql(Unknown Source)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:51)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'slave.user' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:583)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1059)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:56)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	... 37 more
+ INFO 04-12 16:59:53(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 16:59:53(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ERROR 04-12 16:59:53(Log4jFilter.java:152): {conn-110010, pstmt-120000} execute error.  select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:583)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1059)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:56)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy10.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy15.getUserListByMapSql(Unknown Source)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:51)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+ERROR 04-12 16:59:53(ExceptionFilter.java:87):  [DUBBO] Got unchecked and undeclared exception which called by 10.1.38.41. service: com.ailk.dubbo.service.IUserService, method: getUserByMapSql, exception: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+### The error may exist in com/ailk/dubbo/mapper/UserMapper.java (best guess)
+### The error may involve com.ailk.dubbo.mapper.UserMapper.getUserListByMapSql-Inline
+### The error occurred while setting parameters
+### SQL: select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause', dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+### The error may exist in com/ailk/dubbo/mapper/UserMapper.java (best guess)
+### The error may involve com.ailk.dubbo.mapper.UserMapper.getUserListByMapSql-Inline
+### The error occurred while setting parameters
+### SQL: select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:71)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:365)
+	at $Proxy10.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy15.getUserListByMapSql(Unknown Source)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:51)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:583)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1059)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:56)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	... 37 more
+ INFO 04-12 17:00:43(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 17:00:43(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ERROR 04-12 17:00:43(Log4jFilter.java:152): {conn-110010, pstmt-120000} execute error.  select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:583)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1059)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:56)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	at $Proxy10.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy15.getUserListByMapSql(Unknown Source)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:51)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+ERROR 04-12 17:00:43(ExceptionFilter.java:87):  [DUBBO] Got unchecked and undeclared exception which called by 10.1.38.41. service: com.ailk.dubbo.service.IUserService, method: getUserByMapSql, exception: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+### The error may exist in com/ailk/dubbo/mapper/UserMapper.java (best guess)
+### The error may involve com.ailk.dubbo.mapper.UserMapper.getUserListByMapSql-Inline
+### The error occurred while setting parameters
+### SQL: select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause', dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+### The error may exist in com/ailk/dubbo/mapper/UserMapper.java (best guess)
+### The error may involve com.ailk.dubbo.mapper.UserMapper.getUserListByMapSql-Inline
+### The error occurred while setting parameters
+### SQL: select * from user where 1 = 1  and username = ‘admin‘ and password = ‘123456‘
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:71)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:365)
+	at $Proxy10.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:195)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:124)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:90)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at $Proxy15.getUserListByMapSql(Unknown Source)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserListByMapSql(UserDaoImpl.java:51)
+	at com.ailk.dubbo.dao.impl.UserDaoImpl.getUserByMapSql(UserDaoImpl.java:37)
+	at com.ailk.dubbo.service.impl.UserServiceImpl.getUserByMapSql(UserServiceImpl.java:33)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '‘admin‘' in 'where clause'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:583)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1059)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:56)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:70)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:57)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:355)
+	... 37 more
+ INFO 04-12 17:02:54(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 17:02:54(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@42704baa: startup date [Tue Apr 12 17:02:54 CST 2016]; root of context hierarchy
+ INFO 04-12 17:02:54(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 17:02:54(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 17:02:55(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 17:02:55(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 17:02:55(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 17:02:56(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 17:02:56(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 17:02:56(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:56(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:56(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:56(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=11476&registry=zookeeper&timestamp=1460451776581, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:56(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:56(AbstractRegistry.java:232):  [DUBBO] Load registry store file C:\Users\adudu\.dubbo\dubbo-registry-localhost.cache, data: {com.ailk.dubbo.service.IUserService=dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6764&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451494932 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=routers&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898}, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:57(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 17:02:57(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 17:02:57(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@6a24eafa
+ INFO 04-12 17:02:57(ClientCnxn.java:1041): Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181
+ WARN 04-12 17:02:57(ClientCnxn.java:1161): Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Address family not supported by protocol family: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:507)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1050)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1077)
+ INFO 04-12 17:02:57(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 17:02:57(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 17:02:57(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa50005, negotiated timeout = 30000
+ INFO 04-12 17:02:57(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 17:02:57(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:57(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:02:57(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:03:02(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 17:03:03(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ INFO 04-12 17:03:03(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ INFO 04-12 17:04:31(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 17:04:32(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@42704baa: startup date [Tue Apr 12 17:04:32 CST 2016]; root of context hierarchy
+ INFO 04-12 17:04:32(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 17:04:32(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 17:04:32(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 17:04:32(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 17:04:32(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 17:04:33(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 17:04:33(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 17:04:34(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=6560&registry=zookeeper&timestamp=1460451874074, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(AbstractRegistry.java:232):  [DUBBO] Load registry store file C:\Users\adudu\.dubbo\dubbo-registry-localhost.cache, data: {com.ailk.dubbo.service.IUserService=dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=11476&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451776600 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=routers&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=7596&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460451180898}, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 17:04:34(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 17:04:34(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@6a24eafa
+ INFO 04-12 17:04:34(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 17:04:34(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 17:04:34(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa50006, negotiated timeout = 30000
+ INFO 04-12 17:04:34(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 17:04:34(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:34(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:04:59(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 17:04:59(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ INFO 04-12 17:04:59(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ WARN 04-12 17:07:23(AbstractServer.java:197):  [DUBBO] All clients has discontected from /10.1.38.41:28080. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:07:23(DubboProtocol.java:130):  [DUBBO] disconected from /10.1.38.41:58235,url:dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:08:10(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 17:08:10(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ INFO 04-12 17:08:10(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ WARN 04-12 17:09:05(AbstractServer.java:197):  [DUBBO] All clients has discontected from /10.1.38.41:28080. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:09:05(DubboProtocol.java:130):  [DUBBO] disconected from /10.1.38.41:58561,url:dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:10:00(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 17:10:00(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ INFO 04-12 17:10:00(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ WARN 04-12 17:19:28(AbstractServer.java:197):  [DUBBO] All clients has discontected from /10.1.38.41:28080. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:19:28(DubboProtocol.java:130):  [DUBBO] disconected from /10.1.38.41:58587,url:dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6560&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460451874088, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:48(Launcher.java:20): 开始初始化core服务
+ INFO 04-12 17:32:48(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4ba33d48: startup date [Tue Apr 12 17:32:48 CST 2016]; root of context hierarchy
+ INFO 04-12 17:32:48(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 04-12 17:32:49(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-mybatis.xml]
+ INFO 04-12 17:32:49(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 04-12 17:32:49(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ INFO 04-12 17:32:49(PropertiesLoaderSupport.java:172): Loading properties file from class path resource [jdbc.properties]
+ INFO 04-12 17:32:50(DruidDataSource.java:640): {dataSource-1} inited
+ INFO 04-12 17:32:50(DruidDataSource.java:640): {dataSource-2} inited
+ INFO 04-12 17:32:50(ServiceBean.java:107):  [DUBBO] The service ready on spring started. service: com.ailk.dubbo.service.IUserService, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:50(ServiceConfig.java:510):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:50(ServiceConfig.java:470):  [DUBBO] Export dubbo service com.ailk.dubbo.service.IUserService to url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:50(ServiceConfig.java:481):  [DUBBO] Register dubbo service com.ailk.dubbo.service.IUserService url dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758 to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=superdemo_provider&dubbo=2.5.3&pid=5772&registry=zookeeper&timestamp=1460453570740, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:51(AbstractServer.java:69):  [DUBBO] Start NettyServer bind /0.0.0.0:28080, export /10.1.38.41:28080, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:51(AbstractRegistry.java:232):  [DUBBO] Load registry store file C:\Users\adudu\.dubbo\dubbo-registry-localhost.cache, data: {com.ailk.dubbo.service.IUserService=empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=providers&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6452&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460453530458 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6452&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460453530458 empty://10.1.38.41/com.ailk.dubbo.service.IUserService?application=superdemo_consumer&category=routers&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=6452&revision=1.0-SNAPSHOT&side=consumer&timestamp=1460453530458}, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:51(ZkEventThread.java:64): Starting ZkClient event thread.
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:zookeeper.version=3.3.3-1073969, built on 02/23/2011 22:27 GMT
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:host.name=10.1.38.41
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.version=1.6.0_13
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.vendor=Sun Microsystems Inc.
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.home=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.class.path=E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\test-classes;E:\WorkSpace\Eclipse8.5\dubboServerProvider\target\classes;E:\apache-maven-3.1.0\repo\lib\org\apache\openejb\javaee-api\5.0-1\javaee-api-5.0-1.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jstl\1.2\jstl-1.2.jar;E:\apache-maven-3.1.0\repo\lib\javax\servlet\jsp\jsp-api\2.1\jsp-api-2.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis\3.1.1\mybatis-3.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\mybatis\mybatis-spring\1.1.1\mybatis-spring-1.1.1.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-tx\4.1.6.RELEASE\spring-tx-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-orm\4.1.6.RELEASE\spring-orm-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-jdbc\4.1.6.RELEASE\spring-jdbc-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-web\4.1.6.RELEASE\spring-web-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-aop\4.1.6.RELEASE\spring-aop-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-expression\4.1.6.RELEASE\spring-expression-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;E:\apache-maven-3.1.0\repo\lib\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\apache-maven-3.1.0\repo\lib\org\aspectj\aspectjweaver\1.8.5\aspectjweaver-1.8.5.jar;E:\apache-maven-3.1.0\repo\lib\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\druid\1.0.6\druid-1.0.6.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\jconsole.jar;C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\lib\tools.jar;E:\apache-maven-3.1.0\repo\lib\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;E:\apache-maven-3.1.0\repo\lib\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;E:\apache-maven-3.1.0\repo\lib\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;E:\apache-maven-3.1.0\repo\lib\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar;E:\apache-maven-3.1.0\repo\lib\log4j\log4j\1.2.14\log4j-1.2.14.jar;E:\apache-maven-3.1.0\repo\lib\org\apache\zookeeper\zookeeper\3.3.3\zookeeper-3.3.3.jar;E:\apache-maven-3.1.0\repo\lib\jline\jline\0.9.94\jline-0.9.94.jar;E:\apache-maven-3.1.0\repo\lib\junit\junit\3.8.1\junit-3.8.1.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperInterface\SuperInterface\1.0-SNAPSHOT\SuperInterface-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\com\ailk\dubbo\SuperDemo\SuperDemo\1.0-SNAPSHOT\SuperDemo-1.0-SNAPSHOT.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\org\slf4j\slf4j-log4j12\1.7.5\slf4j-log4j12-1.7.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;E:\apache-maven-3.1.0\repo\lib\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;E:\apache-maven-3.1.0\repo\lib\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;E:\apache-maven-3.1.0\repo\lib\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;E:\apache-maven-3.1.0\repo\lib\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.library.path=C:\Users\adudu\AppData\Local\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;E:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;E:\Program Files (x86)\Rational\common;E:\Program Files (x86)\TortoiseSVN\bin
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.io.tmpdir=C:\Users\adudu\AppData\Local\Temp\
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:java.compiler=<NA>
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:os.name=Windows Vista
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:os.arch=amd64
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:os.version=6.2
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:user.name=adudu
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:user.home=C:\Users\adudu
+ INFO 04-12 17:32:51(Environment.java:97): Client environment:user.dir=E:\WorkSpace\Eclipse8.5\dubboServerProvider
+ INFO 04-12 17:32:51(ZooKeeper.java:373): Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@6a24eafa
+ INFO 04-12 17:32:51(ClientCnxn.java:1041): Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181
+ WARN 04-12 17:32:51(ClientCnxn.java:1161): Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Address family not supported by protocol family: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:507)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1050)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1077)
+ INFO 04-12 17:32:51(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 04-12 17:32:51(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 04-12 17:32:51(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15409966aa5000b, negotiated timeout = 30000
+ INFO 04-12 17:32:51(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 04-12 17:32:51(AbstractRegistry.java:302):  [DUBBO] Register: dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:51(AbstractRegistry.java:325):  [DUBBO] Subscribe: provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:32:51(AbstractRegistry.java:422):  [DUBBO] Notify urls for subscribe url provider://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758, urls: [empty://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&category=configurators&check=false&dubbo=2.5.3&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758], dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:33:15(UserDaoImpl.java:36): getUserByMapSql 根据动态参数查询用户对象
+ INFO 04-12 17:33:15(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ INFO 04-12 17:33:15(UserDaoImpl.java:49): getUserListByMapSql 根据动态参数查询用户对象列表
+ WARN 04-12 17:45:37(AbstractServer.java:197):  [DUBBO] All clients has discontected from /10.1.38.41:28080. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 04-12 17:45:37(DubboProtocol.java:130):  [DUBBO] disconected from /10.1.38.41:58752,url:dubbo://10.1.38.41:28080/com.ailk.dubbo.service.IUserService?anyhost=true&application=superdemo_provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.ailk.dubbo.service.IUserService&methods=getUserListByMapSql,getUserByMapSql,getUserById&pid=5772&revision=1.0-SNAPSHOT&side=provider&timeout=3000&timestamp=1460453570758, dubbo version: 2.5.3, current host: 127.0.0.1
